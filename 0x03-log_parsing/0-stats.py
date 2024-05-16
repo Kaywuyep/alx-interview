@@ -2,11 +2,12 @@
 """
 Log Parsing Script
 This script reads log data from standard input (stdin), parses the log entries,
-and tracks the frequency of various HTTP status codes and the cumulative file size
-of all processed log entries. The script prints the cumulative file size and status code
-counts after every 10 lines processed and upon termination (normal or via KeyboardInterrupt).
-Log entries are expected to have a format that includes HTTP status codes and file sizes.
-The supported HTTP status codes being tracked are:
+and tracks the frequency of various HTTP status codes and the cumulative file
+size of all processed log entries. The script prints the cumulative file size
+and status code counts after every 10 lines processed and upon termination
+(normal or via KeyboardInterrupt).
+Log entries are expected to have a format that includes HTTP status codes and
+file sizes. The supported HTTP status codes being tracked are:
 - 200: OK
 - 301: Moved Permanently
 - 400: Bad Request
@@ -31,7 +32,8 @@ def print_status_counts(status_counts, file_size):
     """
     Prints the total file size and the count of each HTTP status code.
     Args:
-        status_counts (dict): A dictionary with HTTP status codes as keys and their counts as values.
+        status_counts (dict): A dictionary with HTTP status codes as
+        keys and their counts as values.
         file_size (int): The cumulative size of files processed.
     """
     print("File size: {}".format(file_size))
