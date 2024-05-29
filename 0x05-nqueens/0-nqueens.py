@@ -21,6 +21,7 @@ def is_valid(board, row, col):
             return False
     return True
 
+
 def solve_nqueens(board, row, solutions):
     if row == len(board):
         solutions.append(board[:])
@@ -30,6 +31,7 @@ def solve_nqueens(board, row, solutions):
             board[row] = col
             solve_nqueens(board, row + 1, solutions)
             board[row] = -1
+
 
 def nqueens(N):
     if not isinstance(N, int):
@@ -44,6 +46,7 @@ def nqueens(N):
     for solution in solutions:
         print([[i, solution[i]] for i in range(N)])
 
+
 def main():
     if len(sys.argv) != 2:
         print_usage_and_exit("Usage: nqueens N")
@@ -52,6 +55,7 @@ def main():
     except ValueError:
         print_usage_and_exit("N must be a number")
     nqueens(N)
+
 
 if __name__ == "__main__":
     main()
